@@ -36,10 +36,8 @@ I've inlcluded 4 screenshots in the `/screenshots` folder: mobile, tablet, deskt
 
 ### Links
 
-I'll update these links once I submit my solution. 
-
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-using-bem-flexbox-css-grid-and-vanilla-js-71IKl_vqZ)
+- [Live Site URL](https://victor-nyagudi.github.io/tip-calculator-app/)
 
 ## My process
 
@@ -101,5 +99,5 @@ Overall, I am content with the way things turned out.
 
 ### Useful resources
 
-- [HTML Forms](https://www.w3schools.com/html/html_forms.asp) - I referred to this often throughout the challenge to brush up on inputs, form elements, etx.
+- [HTML Forms](https://www.w3schools.com/html/html_forms.asp) - I referred to this often throughout the challenge to brush up on inputs, form elements, etc.
 - [Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) - Great in-depth article on accessibility. It helped me gain a better understanding on doing my best to make the web more accessible for all. 
