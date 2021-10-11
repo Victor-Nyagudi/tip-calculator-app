@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <main class="tip-calculator">
+    <h1 class="tip-calculator__title">spli <br>tter</h1>
+
+    <div class="tip-calculator__container">
+      <div class="tip-calculator__calculations container">
+        <form class="tip-calculator__form" id="tip-calculator__form">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" min="0" class="bill-input" autofocus>
+  
+          <fieldset>
+            <legend>Select Tip %</legend>
+            
+            <div class="tip-calculator__percentages">
+              <button type="button" value="5" class="btn tip-calculator__percentage">5%</button>
+              <button type="button" value="10" class="btn tip-calculator__percentage">10%</button>
+              <button type="button" value="15" class="btn tip-calculator__percentage">15%</button>
+              <button type="button" value="25" class="btn tip-calculator__percentage">25%</button>
+              <button type="button" value="50" class="btn tip-calculator__percentage">50%</button>
+              <input type="number" id="custom-percentage" name="custom-percentage" min="0" class="btn tip-calculator__percentage tip-calculator__percentage--custom" placeholder="Custom" aria-label="custom percentage">
+            </div>
+          </fieldset>
+          
+          <div class="feedback-container">
+            <label for="number-of-people">Number of People</label>
+            <span class="feedback" role="alert">Can't be zero</span>
+          </div>
+          <input type="number" name="numberOfPeople" id="numberOfPeople" min="0" class="people-input" aria-label="number of people">
+        </form>
+      </div>
+      
+      <div class="tip-calculator__results container">
+        <div class="results-container container">
+          <div class="results">
+            <div class="result" aria-live="assertive" aria-atomic="true">
+              <p class="result__title">
+                Tip Amount <br> <span class="per-person">/ person</span>
+              </p>
+    
+              <p class="result__amount tip-amount">
+                $0.00
+              </p>
+            </div>
+            
+            <div class="result">
+              <p class="result__title">
+                Total <br> <span class="per-person">/ person</span>
+              </p>
+    
+              <p class="result__amount tip-total">
+                $0.00
+              </p>
+            </div>
+          </div>
+  
+          <input type="button" class="btn tip-calculator__reset" value="Reset" form="tip-calculator__form" disabled>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
