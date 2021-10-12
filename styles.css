@@ -211,8 +211,9 @@ fieldset {
     color: hsl(32, 100%, 50%);
 }
 
-.error {
-    outline: 2px solid hsl(32, 100%, 50);
+input.error,
+input.error:focus {
+    outline: 3px solid hsl(32, 100%, 50%);
 }
 
 .active {
