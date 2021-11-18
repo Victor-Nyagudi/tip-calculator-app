@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+$primary-font: 'Space Mono', monospace;
+
+/*
+     400 and 700 are the only available font weights.  
+     The style guide provided says 500 is needed, so 
+     made due with what I got from Google Fonts.
+*/
+
+$font-weights: (
+    "regular": 400,
+    "bold": 700
+);
+
+$colors: (
+    "strong-cyan": hsl(172, 67%, 45%),
+    "very-dark-cyan": hsl(183, 100%, 15%),
+    
+    "dark-grayish-cyan": hsl(184, 14%, 56%),
+    "darker-grayish-cyan": hsl(186, 14%, 43%),
+    
+    "light-grayish-cyan": hsl(185, 41%, 84%),
+    "lighter-grayish-cyan": hsl(189, 41%, 97%),
+    
+    "white": hsl(0, 0%, 100%)
+);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@function getFontWeight($weight) {
+    @return map-get($map: $font-weights, $key: $weight);
+}
+
+@function getColor($color) {
+    @return map-get($map: $colors, $key: $color);
+}
+
+@mixin media-450 {
+    @media (min-width: 450px) {
+        @content;
+    }
+}
+
+@mixin media-1000 {
+    @media (min-width: 1000px) {
+        @content;
+    }
+}

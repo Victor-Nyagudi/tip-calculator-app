@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*
+     400 and 700 are the only available font weights.  
+     The style guide provided says 500 is needed, so 
+     made due with what I got from Google Fonts.
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #00494d;
+  background-color: #c5e4e7;
+  margin: 0;
+}
+
+h1, p {
+  margin: 0;
+}
+
+label, legend {
+  color: #5e7a7d;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.tip-calculator__title {
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  margin: 1.5em 0;
+}
+
+.tip-calculator__container {
+  background-color: white;
+  border-radius: 22px 22px 0 0;
+  padding: 1.75em 0;
+}
+
+.tip-calculator__container input[type='number'] {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1.4rem;
+  color: #00494d;
+  text-align: right;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4fafa;
+  background-repeat: no-repeat;
+  background-position: 6% 50%;
+  padding: .2em 1.5em;
+  margin-top: .5em;
+}
+
+.tip-calculator__container input[type='number']:focus {
+  outline: 4px solid #c5e4e7;
+}
+
+.tip-calculator__container input[type='number'].error, .tip-calculator__container input[type='number'].error:focus {
+  outline: 3px solid #ff8800;
+}
+
+.tip-calculator__container .bill-input {
+  background-image: url("../images/icon-dollar.svg");
+}
+
+.tip-calculator__container fieldset {
+  border: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+.tip-calculator__container .tip-calculator__percentages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1em 1.3em;
+  padding-top: 1em;
+}
+
+.tip-calculator__container .btn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #00494d;
+  padding: .3em 0;
+}
+
+.tip-calculator__container .btn:not(.tip-calculator__reset):hover {
+  color: #00494d;
+  background-color: #c5e4e7;
+}
+
+.tip-calculator__container .btn:focus {
+  outline: 4px solid #c5e4e7;
+}
+
+.tip-calculator__container .btn:active {
+  color: #00494d;
+  background-color: #26c0ab;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom.btn {
+  color: #5e7a7d;
+  background-color: #f4fafa;
+  margin-top: 0;
+  padding: .2em .5em;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom::-webkit-input-placeholder {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom:-ms-input-placeholder {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom::-ms-input-placeholder {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom::placeholder {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tip-calculator__container .tip-calculator__percentage--custom:hover {
+  background-color: white;
+  outline: 4px solid #c5e4e7;
+}
+
+.tip-calculator__container .people-input {
+  background-image: url("../images/icon-person.svg");
+}
+
+.tip-calculator__container .selected:not(.tip-calculator__percentage--custom) {
+  color: #00494d;
+  background-color: #26c0ab;
+}
+
+.tip-calculator__container .tip-calculator__results {
+  color: white;
+  background-color: #00494d;
+  border-radius: 15px;
+  margin: 1.75em auto 0;
+  padding: 1.5em 0;
+}
+
+.tip-calculator__container .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5em 0;
+}
+
+.tip-calculator__container .result:first-of-type {
+  margin-top: 1em;
+}
+
+.tip-calculator__container .result .per-person {
+  font-size: .8rem;
+  color: #7f9c9f;
+}
+
+.tip-calculator__container .result__amount {
+  font-size: 1.7rem;
+  color: #26c0ab;
+}
+
+.tip-calculator__container .tip-calculator__reset {
+  font-size: 1.2rem;
+  color: #00494d;
+  text-transform: uppercase;
+  width: 100%;
+  opacity: .3;
+  background-color: #26c0ab;
+}
+
+.tip-calculator__container .active {
+  color: #00494d;
+  background-color: #c5e4e7;
+  opacity: 1;
+}
+
+.tip-calculator__container .active.tip-calculator__reset:active {
+  opacity: .6;
+}
+
+.tip-calculator__container .feedback {
+  display: none;
+  font-weight: 700;
+  color: #ff8800;
+}
+
+.tip-calculator__container .feedback-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 450px) {
+  body {
+    padding: 3em 0;
+  }
+  .tip-calculator {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 650px;
+  }
+  .tip-calculator__title {
+    margin-top: 0;
+  }
+  .tip-calculator__container {
+    border-radius: 22px;
+  }
+  .tip-calculator__container .tip-calculator__percentages {
+    gap: 1.25em 1.7em;
+  }
+  .tip-calculator__container .tip-calculator__percentage--custom {
+    padding: 0;
+  }
+  .tip-calculator__container .tip-calculator__percentage--custom::-webkit-input-placeholder {
+    text-align: center;
+  }
+  .tip-calculator__container .tip-calculator__percentage--custom:-ms-input-placeholder {
+    text-align: center;
+  }
+  .tip-calculator__container .tip-calculator__percentage--custom::-ms-input-placeholder {
+    text-align: center;
+  }
+  .tip-calculator__container .tip-calculator__percentage--custom::placeholder {
+    text-align: center;
+  }
+  .tip-calculator fieldset {
+    margin: 2.5em 0;
+  }
+  .tip-calculator .btn {
+    padding: .4em 0;
+  }
+  .tip-calculator .tip-calculator__results {
+    margin: 2.75em auto 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+    padding-top: 0;
+  }
+  .tip-calculator {
+    max-width: 950px;
+  }
+  .tip-calculator__title {
+    margin: 0 0 3em;
+  }
+  .tip-calculator__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3em;
+    padding: 2em;
+  }
+  .tip-calculator__container .tip-calculator__percentages {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+  .tip-calculator__container .tip-calculator__results {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    margin: 0;
+    padding: 2.25em .5em;
+  }
+  .tip-calculator__container .results-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  .tip-calculator__container .result {
+    margin: 2.3em 0;
+  }
+  .tip-calculator__container .result__amount {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
