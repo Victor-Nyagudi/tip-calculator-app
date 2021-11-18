@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/tip-calculator-app-fullscreen.png)
+![](./dist/screenshots/tip-calculator-app-fullscreen.png)
 
 I've inlcluded 4 screenshots in the `/screenshots` folder: mobile, tablet, desktop, and fullscreen.
 
@@ -50,7 +50,7 @@ etc. were complete.
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow

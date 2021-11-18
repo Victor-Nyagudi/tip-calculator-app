@@ -1,0 +1,79 @@
+@include media-450 {
+    body { padding: 3em 0; }
+
+    .tip-calculator {
+        width: 85%;
+        margin: 0 auto;
+        max-width: 650px;   
+        
+        &__title { margin-top: 0; }
+
+        &__container {
+            border-radius: 22px;
+
+            .tip-calculator__percentages { gap: 1.25em 1.7em; }
+
+            .tip-calculator__percentage--custom {
+                padding: 0;
+
+                &::placeholder { text-align: center; }
+            }
+        }
+
+        fieldset { margin: 2.5em 0; }
+    
+        .btn { padding: .4em 0; }
+
+        .tip-calculator__results { margin: 2.75em auto 0; }
+    }
+}
+
+@include media-1000 {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        min-height: 100vh;
+        padding-top: 0;
+    }
+
+    .tip-calculator {
+        max-width: 950px;
+
+        &__title { margin: 0 0 3em; }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            gap: 3em;
+    
+            padding: 2em;
+
+            .tip-calculator__percentages {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1em;
+            }
+
+            .tip-calculator__results {
+                align-self: stretch;
+                margin: 0;
+                padding: 2.25em .5em;
+            }
+            
+            .results-container {
+                display: flex;
+                flex-direction: column;        
+                justify-content: space-between;
+                
+                height: 100%;
+            }
+
+            .result {
+                margin: 2.3em 0;
+                
+                &__amount { font-size: 2.5rem; }
+            }
+        }
+    }
+}
